@@ -28,7 +28,3 @@ This repository will contain every piece of material about the subject. It will 
 * [Microsoft official documentation (free)](https://docs.microsoft.com/en-us/dotnet/csharp/)
 * [C# in depth 4th Edition (Advanced)](https://www.bookdepository.com/C-Depth-4E-Jon-Skeet/9781617294532)
 
-## Contact
-Trainer: trainer@mail.com
-
-Assistant: assistant@mail.com
