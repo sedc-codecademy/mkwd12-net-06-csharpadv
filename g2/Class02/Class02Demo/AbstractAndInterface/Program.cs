@@ -18,8 +18,11 @@ QAEngineer qa = new QAEngineer("Steve", "Stevenson", 35, 38970057343, new List<s
 // Can't create an instance of an abstract class !!!
 //Human human = new Human("test", "test", 23, 23432423);
 
+
+// => we can still use Human as a type (eventhough it's now abstract class)
 Human juniorDev = new Developer("Petko", "Petkovski", 40, 23422343, new List<string> { "C#" }, 2);
-//juniorDev.Code(); 
+// However, only the methods and properties from the Human class will be available in the created instance
+//juniorDev.Code(); // error 
 Console.WriteLine(juniorDev.GetInfo()); 
 
 #endregion
