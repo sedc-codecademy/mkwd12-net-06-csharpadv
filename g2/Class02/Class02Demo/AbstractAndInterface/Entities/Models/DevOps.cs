@@ -12,5 +12,14 @@ namespace AbstractAndInterface.Entities.Models
             AWSCertified = awsCertified;
             AzureCertified = azureCertified;
         }
+
+        public override string GetInfo()
+        {
+            string result = $"{GetFullName()} ({Age}) - Has: ";
+            result += AWSCertified ? "AWS Certified" : "";
+            result += AzureCertified ? "Azure Certified" : string.Empty; // string.Empty is the same as "", it is used for better readability
+            result += AWSCertified || AzureCertified ? string.Empty : "No certificates yet";
+            return result;
+        }
     }
 }

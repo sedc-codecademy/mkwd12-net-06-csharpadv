@@ -10,5 +10,12 @@ namespace AbstractAndInterface.Entities.Models
         {
             TestingFrameworks = frameworks;
         }
+
+        public override string GetInfo()
+        {
+            string testingFrameworks = TestingFrameworks.Count != 0 ? string.Join(", ", TestingFrameworks) : "N/A";
+
+            return $"{GetFullName()} ({Age}) - Knows testing frameworks: {testingFrameworks}.";
+        }
     }
 }

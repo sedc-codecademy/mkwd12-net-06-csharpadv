@@ -10,5 +10,10 @@ namespace AbstractAndInterface.Entities.Models
         {
             Projects = projects;
         }
+
+        public override string GetInfo()
+        {
+            return $"{GetFullName()} ({Age}) - Currently working on {Projects.Count} projects!";
+        }
     }
 }

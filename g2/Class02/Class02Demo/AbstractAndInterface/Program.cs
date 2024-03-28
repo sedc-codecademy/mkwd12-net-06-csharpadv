@@ -18,5 +18,42 @@ QAEngineer qa = new QAEngineer("Steve", "Stevenson", 35, 38970057343, new List<s
 // Can't create an instance of an abstract class !!!
 // Human human = new Human("test", "test", 23, 23432423);
 
+#endregion
+
+#region Testing all methods
+Console.ForegroundColor = ConsoleColor.Blue;
+Console.WriteLine("The Developer:");
+Console.WriteLine(dev.GetInfo());
+Console.ResetColor();
+
+Console.WriteLine("----------------");
+
+Console.ForegroundColor = ConsoleColor.Red;
+Console.WriteLine("The Tester:");
+Console.WriteLine(tester.GetInfo());
+Console.ResetColor();
+
+Console.WriteLine("----------------");
+
+Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine("The IT Operations Specialist:");
+Console.WriteLine(ops.GetInfo());
+Console.ResetColor();
+
+Console.WriteLine("----------------");
+
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine("The DevOps:");
+Console.WriteLine(devOps.GetInfo());
+Console.ResetColor();
+
+Console.WriteLine("----------------");
+
+Console.ForegroundColor = ConsoleColor.Yellow;
+Console.WriteLine("The QA Engineer:");
+Console.WriteLine(qa.GetInfo());
+Console.ResetColor();
+
+Console.WriteLine("----------------");
 
 #endregion

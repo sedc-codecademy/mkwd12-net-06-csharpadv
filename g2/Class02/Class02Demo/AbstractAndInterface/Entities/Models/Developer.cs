@@ -19,5 +19,10 @@ namespace AbstractAndInterface.Entities.Models
             ProgrammingLanguages = programmingLanguages;
             YearsOfExperience = yearsOfExperience;
         }
+
+        public override string GetInfo()
+        {
+            return $"{GetFullName()} ({Age}) - {YearsOfExperience} years of experience!";
+        }
     }
 }

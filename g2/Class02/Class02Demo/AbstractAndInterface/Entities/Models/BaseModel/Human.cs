@@ -7,6 +7,7 @@
         public string LastName { get; set; }
         public int Age { get; set; }
         public long Phone { get; set; }
+        //public abstract string Test {  get; set; } // rarely used
 
         public Human(string firstName, string lastName, int age, long phone)
         {
@@ -16,10 +17,8 @@
             Phone = phone;
         }
 
-        public string GetInfo() 
-        {
-            return $"{GetFullName()} ({Age})";
-        }
+        public abstract string GetInfo();
+
         public string GetFullName() 
         {
             return $"{FirstName} {LastName}";

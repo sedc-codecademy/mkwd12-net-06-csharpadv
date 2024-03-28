@@ -10,5 +10,10 @@ namespace AbstractAndInterface.Entities.Models
         {
             BugsFound = bugsFound;
         }
+
+        public override string GetInfo()
+        {
+            return $"{GetFullName()} ({Age}) - found {BugsFound} bugs to date!";
+        }
     }
 }
