@@ -1,8 +1,9 @@
-﻿using AbstractAndInterface.Entities.Models.BaseModel;
+﻿using AbstractAndInterface.Entities.Interfaces;
+using AbstractAndInterface.Entities.Models.BaseModel;
 
 namespace AbstractAndInterface.Entities.Models
 {
-    public class Developer : Human
+    public class Developer : Human, IDeveloper
     {
         //public int Id { get; set; }
         //public string FirstName { get; set; }
@@ -23,6 +24,13 @@ namespace AbstractAndInterface.Entities.Models
         public override string GetInfo()
         {
             return $"{GetFullName()} ({Age}) - {YearsOfExperience} years of experience!";
+        }
+
+        public void Code()
+        {
+            Console.WriteLine("tak tak tak...");
+            Console.WriteLine("Opens ChatGPT...");
+            Console.WriteLine("tak tak tak tak tak...");
         }
     }
 }

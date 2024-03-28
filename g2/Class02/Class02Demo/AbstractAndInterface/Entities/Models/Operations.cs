@@ -1,8 +1,9 @@
-﻿using AbstractAndInterface.Entities.Models.BaseModel;
+﻿using AbstractAndInterface.Entities.Interfaces;
+using AbstractAndInterface.Entities.Models.BaseModel;
 
 namespace AbstractAndInterface.Entities.Models
 {
-    public class Operations : Human
+    public class Operations : Human, IOperations
     {
         public List<string> Projects { get; set; } = new List<string>();
 
@@ -14,6 +15,16 @@ namespace AbstractAndInterface.Entities.Models
         public override string GetInfo()
         {
             return $"{GetFullName()} ({Age}) - Currently working on {Projects.Count} projects!";
+        }
+
+        public bool CheckInfrastructure(int status)
+        {
+            return !status.ToString().StartsWith('4');
+            if (status.ToString().StartsWith('4')) 
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

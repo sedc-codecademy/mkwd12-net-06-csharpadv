@@ -24,6 +24,8 @@ QAEngineer qa = new QAEngineer("Steve", "Stevenson", 35, 38970057343, new List<s
 Console.ForegroundColor = ConsoleColor.Blue;
 Console.WriteLine("The Developer:");
 Console.WriteLine(dev.GetInfo());
+dev.Greet("Students");
+dev.Code();
 Console.ResetColor();
 
 Console.WriteLine("----------------");
@@ -31,6 +33,8 @@ Console.WriteLine("----------------");
 Console.ForegroundColor = ConsoleColor.Red;
 Console.WriteLine("The Tester:");
 Console.WriteLine(tester.GetInfo());
+tester.Greet("Petko");
+tester.TestFeature("Log in");
 Console.ResetColor();
 
 Console.WriteLine("----------------");
@@ -38,6 +42,7 @@ Console.WriteLine("----------------");
 Console.ForegroundColor = ConsoleColor.Cyan;
 Console.WriteLine("The IT Operations Specialist:");
 Console.WriteLine(ops.GetInfo());
+Console.WriteLine("Infrastructure OK: " + ops.CheckInfrastructure(200)); 
 Console.ResetColor();
 
 Console.WriteLine("----------------");
@@ -45,6 +50,7 @@ Console.WriteLine("----------------");
 Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine("The DevOps:");
 Console.WriteLine(devOps.GetInfo());
+Console.WriteLine("Infrastructure OK: " + ops.CheckInfrastructure(400));
 Console.ResetColor();
 
 Console.WriteLine("----------------");
@@ -52,8 +58,12 @@ Console.WriteLine("----------------");
 Console.ForegroundColor = ConsoleColor.Yellow;
 Console.WriteLine("The QA Engineer:");
 Console.WriteLine(qa.GetInfo());
+qa.Code();
+qa.TestFeature("Payment");
 Console.ResetColor();
 
 Console.WriteLine("----------------");
 
 #endregion
+
+Console.ReadLine();
