@@ -16,7 +16,11 @@ DevOps devOps = new DevOps("John", "Doe", 24, 38978123123, false, true);
 QAEngineer qa = new QAEngineer("Steve", "Stevenson", 35, 38970057343, new List<string> { "Selenium", "Puppeteer" });
 
 // Can't create an instance of an abstract class !!!
-// Human human = new Human("test", "test", 23, 23432423);
+//Human human = new Human("test", "test", 23, 23432423);
+
+Human juniorDev = new Developer("Petko", "Petkovski", 40, 23422343, new List<string> { "C#" }, 2);
+//juniorDev.Code(); 
+Console.WriteLine(juniorDev.GetInfo()); 
 
 #endregion
 
