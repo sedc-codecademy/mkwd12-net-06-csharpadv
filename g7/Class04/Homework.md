@@ -13,7 +13,7 @@
 ## Task 2
 
 Create class PrintInConsole that will have multiple methods to print in console. Print(), PrintCollection().
-Make this methods to be valid for more that one type and reuse the implenetation (hint: make them generic);
+Make this methods to be valid for more that one type and reuse the implementation (hint: make them generic);
 
 
 
