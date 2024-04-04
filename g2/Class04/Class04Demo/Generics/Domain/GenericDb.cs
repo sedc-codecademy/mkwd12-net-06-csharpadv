@@ -3,6 +3,7 @@ using Generics.Domain.Models.BaseModel;
 
 namespace Generics.Domain
 {
+    // "where T : BaseEntity" ===> only classes derived from BaseEntity are allowed to use GenericDb<T>
     public class GenericDb<T> : IGenericDb<T> where T : BaseEntity
     {
         private List<T> Db;

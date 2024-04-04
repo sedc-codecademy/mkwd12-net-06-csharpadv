@@ -1,5 +1,8 @@
 ﻿namespace Generics.Helpers
 {
+    /// <summary>
+    ///     Class with non-generic methods
+    /// </summary>
     public class NotGenericListHelper
     {
         public void GoThroughStrings(List<string> strings)
