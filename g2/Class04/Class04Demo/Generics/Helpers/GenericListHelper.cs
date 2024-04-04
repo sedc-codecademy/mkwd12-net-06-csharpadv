@@ -10,7 +10,7 @@
             }
         }
 
-        public void GetListInfo<T>(List<T> items)
+        public static void GetListInfo<T>(List<T> items)
         {
             T first = items[0];
             Console.WriteLine($"This list has {items.Count} members and of type {first.GetType().Name}!");
