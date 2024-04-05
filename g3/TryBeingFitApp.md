@@ -1,4 +1,4 @@
-##### DEADLINE 05.05.24 #####
+## DEADLINE 05.05.24 ##
 # TryBeingFit 🤸‍♂️
 ## Main goal
 Being fit should not be hard. 
