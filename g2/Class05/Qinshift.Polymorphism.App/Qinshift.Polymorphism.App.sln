@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qinshift.Polymorphism.App", "Qinshift.Polymorphism.App\Qinshift.Polymorphism.App.csproj", "{D863AC7F-64EB-405A-BD28-DF47A5B6F3C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qinshift.Polymorphism.Domain", "Qinshift.Polymorphism.Domain\Qinshift.Polymorphism.Domain.csproj", "{C98910EC-B17E-44B7-BA49-2A3ECCCD1207}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qinshift.Polymorphism.Service", "Qinshift.Polimorphism.Service\Qinshift.Polymorphism.Service.csproj", "{638658F5-6FCE-4EEC-88F6-5F98CD0685E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D863AC7F-64EB-405A-BD28-DF47A5B6F3C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D863AC7F-64EB-405A-BD28-DF47A5B6F3C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D863AC7F-64EB-405A-BD28-DF47A5B6F3C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D863AC7F-64EB-405A-BD28-DF47A5B6F3C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C98910EC-B17E-44B7-BA49-2A3ECCCD1207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C98910EC-B17E-44B7-BA49-2A3ECCCD1207}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C98910EC-B17E-44B7-BA49-2A3ECCCD1207}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C98910EC-B17E-44B7-BA49-2A3ECCCD1207}.Release|Any CPU.Build.0 = Release|Any CPU
+		{638658F5-6FCE-4EEC-88F6-5F98CD0685E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{638658F5-6FCE-4EEC-88F6-5F98CD0685E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{638658F5-6FCE-4EEC-88F6-5F98CD0685E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{638658F5-6FCE-4EEC-88F6-5F98CD0685E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87FDFB35-680E-4B5D-A451-4B5AAE365811}
+	EndGlobalSection
+EndGlobal
