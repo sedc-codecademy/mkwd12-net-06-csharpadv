@@ -1,5 +1,8 @@
 ﻿using Models.Enums;
 using Models;
+using System;
+using System.Xml.Linq;
+using System.ComponentModel;
 
 namespace Class06_Exercise01
 {
@@ -59,6 +62,92 @@ namespace Class06_Exercise01
                 new Person("Cristofer", "Stanley", 28, JobEnum.Dentist)
                 { Dogs = new List<Dog>() {dogs[9], dogs[14], dogs[15] } }
             };
+
+            //Find and print all persons, that FirstName starting with 'R', ordered by Age - DESCENDING ORDER
+            Console.WriteLine("-------------Results Query 1-----------");
+            var resultQuery1 = people.Where(x => x.FirstName.StartsWith("R")).OrderByDescending(x => x.Age).ToList();
+            PrintPeople(resultQuery1);
+
+            //Find and print all brown dogs names and ages older than 3 years, ordered by Age - ASCENDING ORDER
+            Console.WriteLine("-------------Results Query 2-----------");
+            var resultQuery2 = dogs.Where(x => x.Color == "Brown" && x.Age > 3).OrderBy(x => x.Age).Select(x => x.Name).ToList();
+
+            resultQuery2.ForEach(Console.WriteLine);
+
+            //foreach(var name in resultQuery2)
+            //{
+            //    Console.WriteLine(name);
+            //}
+
+            //Find and print all persons with more than 2 dogs, ordered by Name - DESCENDING ORDER
+            Console.WriteLine("-------------Results Query 3-----------");
+            var resultQuery3 = people.Where(x => x.Dogs.Count > 2).OrderByDescending(x => x.FirstName).ToList();
+            PrintPeople(resultQuery3);
+
+            //Find and print all Freddy`s dogs names older than 1 year
+            Console.WriteLine("-------------Results Query 4-----------");
+            //var freddy = people.FirstOrDefault(x => x.FirstName == "Freddy");
+
+            //if (freddy == null) throw new Exception("Freddy not found");
+
+            //var resultQuery4 = freddy.Dogs.Where(x => x.Age > 1).Select(x => x.Name).ToList();
+            //resultQuery4.ForEach(Console.WriteLine);
+
+            var resultQuery4 = people.FirstOrDefault(x => x.FirstName == "Freddy")?.Dogs.Where(x => x.Age > 1).Select(x => x.Name).ToList();
+
+            if (resultQuery4 == null)
+            {
+                Console.WriteLine("No result");
+            }
+            else
+            {
+                resultQuery4.ForEach(Console.WriteLine);
+            }
+
+            var resultQuery4_1 = people.Where(x => x.FirstName == "Freddy")
+                                        .SelectMany(x => x.Dogs)
+                                        .Where(x => x.Age > 1).Select(x => x.Name)
+                                        .ToList();
+
+            resultQuery4_1.ForEach(Console.WriteLine);
+
+            //Find and print Nathen`s first dog
+            Console.WriteLine("-------------Results Query 5-----------");
+            var resultQuery5 = people.FirstOrDefault(x => x.FirstName == "Nathen")?.Dogs.FirstOrDefault();
+
+            if (resultQuery5 == null)
+            {
+                Console.WriteLine("No result");
+            }
+            else
+            {
+                Console.WriteLine(resultQuery5.GetInfo());
+            }
+
+            //Find and print all white dogs names from Cristofer, Freddy, Erin and Amelia, ordered by Name - ASCENDING ORDER
+            Console.WriteLine("-------------Results Query 6-----------");
+            var resultQuery6 = people.Where(x => x.FirstName == "Cristofer" ||
+                                                x.FirstName == "Freddy" ||
+                                                x.FirstName == "Erin" ||
+                                                x.FirstName == "Amelia")
+                                    .SelectMany(x => x.Dogs)
+                                    .Where(x => x.Color == "White")
+                                    .OrderBy(x => x.Name)
+                                    .Select(x => x.Name)
+                                    .ToList();
+
+            resultQuery6.ForEach(Console.WriteLine);
+
+            //var people1 = people.Where(x => x.FirstName == "Cristofer" ||
+            //                                    x.FirstName == "Freddy" ||
+            //                                    x.FirstName == "Erin" ||
+            //                                    x.FirstName == "Amelia");
+            //List<Dog> s = new List<Dog>();
+            //foreach(var p in people1)
+            //{
+            //    s.AddRange(p.Dogs);
+            //}
+
         }
 
         static void PrintPeople(List<Person> list)
