@@ -7,6 +7,7 @@ namespace LinqMethods.Helpers
         public static List<Student> Students = new List<Student>()
         {
             new Student(12, "Bob", "Bobsky", 29, false),
+            new Student(13, "Bob", "Bobskyyyy", 50, false),
             new Student(22, "Jill", "Wayne", 36, true),
             new Student(27, "Greg", "Gregsky", 45, false),
             new Student(29, "Anne", "Willson", 31, true),
