@@ -1,6 +1,2 @@
-﻿
-using LinqMethods.Helpers;
-
-ConsoleHelper.PrintInColor("\n====================== LINQ ======================", ConsoleColor.DarkCyan);
-
-
+﻿// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");

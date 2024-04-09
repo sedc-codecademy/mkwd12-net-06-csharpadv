@@ -1,4 +1,6 @@
-﻿namespace LinqMethods.Entities
+﻿using System.Collections.Generic;
+
+namespace LinqMethods.Entities
 {
     public class Student : BaseEntity
     {
