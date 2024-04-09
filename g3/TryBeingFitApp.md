@@ -9,7 +9,6 @@ The application should have live and video trainings so that people can train an
 * The app should have Trainers 
 * Users must be able to log in
 * Users must be able to register
-* The users need to pick their role before loging in
 * The app should have live and video trainings
 * We can check the rating for the video training, and also get how many hours are left till the next live training.
 * Standard users can have video trainings

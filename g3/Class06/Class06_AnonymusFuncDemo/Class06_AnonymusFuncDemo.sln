@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class06_AnonymusFuncDemo", "Class06_AnonymusFuncDemo\Class06_AnonymusFuncDemo.csproj", "{F08631DA-A5A4-4ACD-8ADF-48880E175C60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F08631DA-A5A4-4ACD-8ADF-48880E175C60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F08631DA-A5A4-4ACD-8ADF-48880E175C60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F08631DA-A5A4-4ACD-8ADF-48880E175C60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F08631DA-A5A4-4ACD-8ADF-48880E175C60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9877F087-0817-4FC7-A692-63138B5A7AD0}
+	EndGlobalSection
+EndGlobal
