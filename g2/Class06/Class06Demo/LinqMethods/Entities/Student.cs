@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace LinqMethods.Entities
+﻿namespace LinqMethods.Entities
 {
     public class Student : BaseEntity
     {
