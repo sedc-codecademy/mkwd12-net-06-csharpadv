@@ -4,7 +4,7 @@
 
 1) Filter all cars that have origin from Europe.
 2) Find all unique cylinder values for cars.
-3) Select all car names with their model names converted to uppercase.
+3) Select all car model names with their model names converted to uppercase.
 4) Check if there are any cars with horsepower greater than 300.
 5) Find the car with the highest horsepower.
 6) Filter all "Chevrolet" cars and order them by weight in descending order.
