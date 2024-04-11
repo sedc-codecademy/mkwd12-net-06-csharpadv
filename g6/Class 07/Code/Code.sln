@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedLINQ", "AdvancedLINQ\AdvancedLINQ.csproj", "{5CA7AB37-FBFF-4E12-BA8C-3AF17ED3EC74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedLINQ.Domain", "AdvancedLINQ.Domain\AdvancedLINQ.Domain.csproj", "{6A7D6CFA-1165-4A8F-90D4-7553D3AE169F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CA7AB37-FBFF-4E12-BA8C-3AF17ED3EC74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CA7AB37-FBFF-4E12-BA8C-3AF17ED3EC74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CA7AB37-FBFF-4E12-BA8C-3AF17ED3EC74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CA7AB37-FBFF-4E12-BA8C-3AF17ED3EC74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A7D6CFA-1165-4A8F-90D4-7553D3AE169F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A7D6CFA-1165-4A8F-90D4-7553D3AE169F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A7D6CFA-1165-4A8F-90D4-7553D3AE169F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A7D6CFA-1165-4A8F-90D4-7553D3AE169F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10F8CDFB-CA6D-472F-A94B-628FF7D1054B}
+	EndGlobalSection
+EndGlobal
