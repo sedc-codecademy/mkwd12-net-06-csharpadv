@@ -13,9 +13,11 @@ namespace TaxiManagerApp
 
             uiService.Login();
 
-            var loggedInUser = CurrentSession.CurrentUser;
-
-
+            while (true)
+            {
+                uiService.ShowMenu();
+                var users = Storage.Users.GetAll();
+            }
         }
     }
 }
