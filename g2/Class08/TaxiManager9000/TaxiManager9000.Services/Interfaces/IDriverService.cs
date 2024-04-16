@@ -1,6 +1,8 @@
-﻿namespace TaxiManager9000.Services.Interfaces
+﻿using TaxiManager9000.Domain.Models;
+
+namespace TaxiManager9000.Services.Interfaces
 {
-    public interface IDriverService
+    public interface IDriverService : IServiceBase<Driver>
     {
     }
 }

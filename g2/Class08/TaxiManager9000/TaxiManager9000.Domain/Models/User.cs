@@ -8,6 +8,11 @@ namespace TaxiManager9000.Domain.Models
         public string Password { get; set; }
         public Role Role { get; set; }
 
+        public User()
+        {
+            
+        }
+
         public User( string username, string password, Role role)
         {
             Username = username;
