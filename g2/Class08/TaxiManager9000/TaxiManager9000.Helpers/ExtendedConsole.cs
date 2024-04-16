@@ -1,7 +1,4 @@
-﻿using System;
-using System.Threading.Channels;
-
-namespace TaxiManager9000.Helpers
+﻿namespace TaxiManager9000.Helpers
 {
     public static class ExtendedConsole
     {
@@ -24,6 +21,7 @@ namespace TaxiManager9000.Helpers
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(text);
             Console.ResetColor();
+            Console.ReadLine();
         }
 
         public static void PrintError(string text)
@@ -31,6 +29,7 @@ namespace TaxiManager9000.Helpers
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(text);
             Console.ResetColor();
+            Console.ReadLine();
         }
 
         public static string GetInput(string text)

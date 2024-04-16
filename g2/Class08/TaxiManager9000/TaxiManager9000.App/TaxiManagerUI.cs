@@ -2,6 +2,7 @@
 using TaxiManager9000.Domain.Models;
 using TaxiManager9000.Helpers;
 using TaxiManager9000.Services;
+using TaxiManager9000.Services.Enums;
 using TaxiManager9000.Services.Interfaces;
 
 namespace TaxiManager9000.App
@@ -27,31 +28,80 @@ namespace TaxiManager9000.App
             while (true)
             {
                 Console.Clear();
-                try
+                #region Login
+                if (_userService.CurrentUser is null)
                 {
-                    ExtendedConsole.PrintTitle("\n\t*** Taxi Manager 9000 ***\n");
-                    int choice = _uiService.ChooseMenu(new List<string> { "Login", "Exit" });
-                    if (choice == -1)
+                    try
                     {
-                        ExtendedConsole.PrintError("Invalid choice! Try again...");
+                        ExtendedConsole.PrintTitle("\n\t*** Taxi Manager 9000 ***\n");
+                        int choice = _uiService.ChooseMenu(new List<string> { "Login", "Exit" });
+                        if (choice == -1)
+                        {
+                            ExtendedConsole.PrintError("Invalid choice! Try again...");
+                            continue;
+                        }
+                        if (choice == 2)
+                        {
+                            break;
+                        }
+
+                        User inputUser = _uiService.LoginMenu();
+                        _userService.Login(inputUser.Username, inputUser.Password);
+                        ExtendedConsole.PrintSuccess($"\nWelcome {_userService.CurrentUser.Role} {_userService.CurrentUser.Username} !");
+
+                    }
+                    catch (Exception ex)
+                    {
+                        ExtendedConsole.PrintError(ex.Message);
                         continue;
                     }
-                    if (choice == 2)
-                    {
-                        break;
-                    }
-
-                    User inputUser = _uiService.LoginMenu();
-                    _userService.Login(inputUser.Username, inputUser.Password);
-                    ExtendedConsole.PrintSuccess($"\nWelcome {_userService.CurrentUser.Role} {_userService.CurrentUser.Username} !");
-
                 }
-                catch (Exception ex)
+                #endregion
+
+                #region Main Menu
+                int menuChoiceNumber = _uiService.MainMenu(_userService.CurrentUser.Role);
+                if (menuChoiceNumber == -1)
                 {
-                    ExtendedConsole.PrintError(ex.Message);
+                    ExtendedConsole.PrintError("Invalid choice! Try again...");
                     continue;
                 }
+
+                MenuChoice mainMenuChoice = _uiService.MenuItems[menuChoiceNumber - 1];
+
+                switch (mainMenuChoice)
+                {
+                    case MenuChoice.AddNewUser:
+
+                        break;
+                    case MenuChoice.RemoveExistingUser:
+
+                        break;
+                    case MenuChoice.ListAllDrivers:
+
+                        break;
+                    case MenuChoice.TaxiLicenseStatus:
+
+                        break;
+                    case MenuChoice.DriverManager:
+
+                        break;
+                    case MenuChoice.ListAllCars:
+
+                        break;
+                    case MenuChoice.LicensePlateStatus:
+
+                        break;
+                    case MenuChoice.ChangePassword:
+
+                        break;
+                    case MenuChoice.Exit:
+                        _userService.CurrentUser = null;
+                        continue;
+                }
+                #endregion
             }
+
+            _uiService.EndMenu();
         }
 
         /// <summary>
