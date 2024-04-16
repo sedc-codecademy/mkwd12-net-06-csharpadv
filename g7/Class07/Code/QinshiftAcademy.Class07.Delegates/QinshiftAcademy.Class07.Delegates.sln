@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QinshiftAcademy.Class07.Delegates", "QinshiftAcademy.Class07.Delegates\QinshiftAcademy.Class07.Delegates.csproj", "{A4994145-329D-42E7-BE4A-1B63D28DDB93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QinshiftAcademy.Class07.Delegates", "QinshiftAcademy.Class07.Delegates\QinshiftAcademy.Class07.Delegates.csproj", "{A4994145-329D-42E7-BE4A-1B63D28DDB93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class07_Events", "Class07_Events\Class07_Events.csproj", "{A57DD394-65C1-4A41-AC38-D9869093E56A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A4994145-329D-42E7-BE4A-1B63D28DDB93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4994145-329D-42E7-BE4A-1B63D28DDB93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4994145-329D-42E7-BE4A-1B63D28DDB93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A57DD394-65C1-4A41-AC38-D9869093E56A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A57DD394-65C1-4A41-AC38-D9869093E56A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A57DD394-65C1-4A41-AC38-D9869093E56A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A57DD394-65C1-4A41-AC38-D9869093E56A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

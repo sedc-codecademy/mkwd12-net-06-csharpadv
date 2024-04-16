@@ -81,17 +81,17 @@ namespace Class07_EventsDemo
             marketVero.Subscribe(user2.NewPromotion);
             marketVero.CreatePromotion();
 
-            var site = new WebAggregator
-            {
-                Name = "Letok",
-                Url = "letok.mk"
-            };
+            //var site = new WebAggregator
+            //{
+            //    Name = "Letok",
+            //    Url = "letok.mk"
+            //};
 
-            marketKam.Subscribe(site.NewProductPromotion);
-            marketVero.Subscribe(site.NewProductPromotion);
+            //marketKam.Subscribe(site.NewProductPromotion);
+            //marketVero.Subscribe(site.NewProductPromotion);
 
-            marketVero.CreatePromotion();
-            marketKam.CreatePromotion();
+            //marketVero.CreatePromotion();
+            //marketKam.CreatePromotion();
         }
     }
 }
