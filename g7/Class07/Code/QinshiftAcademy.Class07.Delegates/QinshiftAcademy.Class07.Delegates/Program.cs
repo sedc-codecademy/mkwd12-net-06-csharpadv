@@ -29,6 +29,28 @@ void PrintResult(int num1, int num2 , NumbersDelegate numbersDelegate)
     Console.WriteLine($"Result: {result}");
 }
 
+//Just as a comparison how it will look like without delegate
+void PrintResult2(int num1, int num2, string operation)
+{
+    if(operation == "+")
+    {
+        int result = num1 + num2;
+        Console.WriteLine($"Result {result}");
+    }
+    else if(operation == "-")
+    {
+        int result = num1 - num2;
+        Console.WriteLine($"Result {result}");
+    }
+    else
+    {
+        Console.WriteLine("Wrong input");
+    }
+}
+
+PrintResult2(3, 4, "+");
+PrintResult2(10, 7, "-");
+
 PrintResult(3, 4, Sum);
 PrintResult(10, 7, Subtract);
 

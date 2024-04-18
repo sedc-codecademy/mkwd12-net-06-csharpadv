@@ -1,0 +1,4 @@
+Hello from outer space!
+We are writing text from a galaxy far far away!
+Hello Quinshift!
+We are writing text from StreamWriter!
