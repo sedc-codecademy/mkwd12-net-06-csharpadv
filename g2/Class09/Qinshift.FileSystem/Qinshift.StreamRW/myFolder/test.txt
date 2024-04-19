@@ -1,0 +1,7 @@
+HELLOOOOO SEDC!!!!
+We are writing text with StreamWriter
+Writing is complete!
+BYE BYEBYE BYEHELLOOOOO SEDC!!!!
+We are writing text with StreamWriter
+Writing is complete!
+BYE BYEBYE BYE
