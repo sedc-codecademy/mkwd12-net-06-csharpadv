@@ -1,4 +1,5 @@
 ﻿
+using Disposable;
 using Helpers;
 
 ExtendedConsole.PrintInColor("\n================= DISPOSING =================\n\n", ConsoleColor.Cyan);
@@ -107,7 +108,43 @@ void UsingDisposeExample()
 
 
 #region Dispose with our own Disposable class
+void AppendTextInFileCustomImplementation(string text, string filePath)
+{
+    OurWriter writer = new OurWriter(filePath);
+    writer.Write(text);
+    writer.Dispose();
+    //using (OurWriter ow = new OurWriter(filePath))
+    //{
+    //    ow.Write(text);
+    //}
+}
 
+void ReadTextFromFileCustomImplementation(string filePath)
+{
+    using (OurReader or = new OurReader(filePath))
+    {
+        Console.WriteLine(or.Read());
+    }
+}
+
+void CustomDisposeExample()
+{
+    ExtendedConsole.PrintInColor("Enter text pt1: ");
+    string text1 = Console.ReadLine();
+    AppendTextInFileCustomImplementation(text1, FilePath);
+
+    ExtendedConsole.PrintInColor("Enter text pt2: ");
+    string text2 = Console.ReadLine();
+    AppendTextInFileCustomImplementation(text2, FilePath);
+
+    ExtendedConsole.PrintInColor("Enter text pt3: ");
+    string text3 = Console.ReadLine();
+    AppendTextInFileCustomImplementation(text3, FilePath);
+
+    Console.ReadLine();
+    ExtendedConsole.PrintInColor("----------- Read -----------\n");
+    ReadTextFromFileCustomImplementation(FilePath);
+}
 
 
 #endregion
