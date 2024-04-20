@@ -1,0 +1,6 @@
+text 1 manual
+text 2 manual
+text 3 manual
+text 1 save
+text 2 save
+text 3 save
