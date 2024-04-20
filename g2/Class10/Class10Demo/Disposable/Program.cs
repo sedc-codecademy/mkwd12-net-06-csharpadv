@@ -152,6 +152,6 @@ void CustomDisposeExample()
 
 //ManualDisposeExample();
 //UsingDisposeExample();
-
+CustomDisposeExample();
 
 Console.ReadLine();
