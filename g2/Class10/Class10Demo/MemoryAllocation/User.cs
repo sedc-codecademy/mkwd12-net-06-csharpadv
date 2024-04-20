@@ -1,4 +1,6 @@
-﻿namespace MemoryAllocation
+﻿using Helpers;
+
+namespace MemoryAllocation
 {
     internal class User
     {
@@ -15,9 +17,15 @@
         {
             FirstName = firstName;
             LastName = lastName;
-            Age = age;       
+            Age = age;
+            ExtendedConsole.PrintInColor($"User object {FirstName} created. [{DateTime.Now}]", ConsoleColor.Green);
         }
 
+        ~User()
+        {
+            ExtendedConsole.PrintError($"User object {FirstName} destroyed. [{DateTime.Now}]");
+        }
+        
         public void PrintInfo()
         {
             Console.WriteLine($"INFO: {FirstName} {LastName} ({Age})");

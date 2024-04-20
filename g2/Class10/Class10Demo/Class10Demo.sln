@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryAllocation", "MemoryA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.csproj", "{12A2FB9F-1C70-41EB-A1E1-B8E3543A741A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Disposable", "Disposable\Disposable.csproj", "{1E83E2CD-127A-4B50-879C-C1CB62ED1FD9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{12A2FB9F-1C70-41EB-A1E1-B8E3543A741A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12A2FB9F-1C70-41EB-A1E1-B8E3543A741A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12A2FB9F-1C70-41EB-A1E1-B8E3543A741A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E83E2CD-127A-4B50-879C-C1CB62ED1FD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E83E2CD-127A-4B50-879C-C1CB62ED1FD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E83E2CD-127A-4B50-879C-C1CB62ED1FD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E83E2CD-127A-4B50-879C-C1CB62ED1FD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
