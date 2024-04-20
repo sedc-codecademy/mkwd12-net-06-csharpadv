@@ -7,7 +7,7 @@ namespace TryBeingFit.Services.implementations
 {
     public class UiService : IUiService
     {
-        public List<string> MenuItems { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public List<string> MenuItems { get; set; }
 
         public int AccountMenu()
         {
@@ -21,7 +21,7 @@ namespace TryBeingFit.Services.implementations
             {
                 for (int i = 0; i < menuItems.Count; i++)
                 {
-                    Console.WriteLine($"[{i + 1}] {menuItems[1]}");
+                    Console.WriteLine($"[{i + 1}] {menuItems[i]}");
                 }
                 string input = Console.ReadLine();
                 int choice = ValidationHelper.ValidateNumber(input, menuItems.Count);
@@ -70,6 +70,8 @@ namespace TryBeingFit.Services.implementations
             standardUser.LastName = lastName;
             standardUser.Username = username;
             standardUser.Password = password;
+
+            return standardUser;
         }
 
         public int LogInMenu()
@@ -95,7 +97,7 @@ namespace TryBeingFit.Services.implementations
                     MenuItems.Add("Train");
                     break;
                 case UserType.Trainer:
-                    MenuItems.Add("reschedule training");
+                    MenuItems.Add("Reschedule training");
                     break;
             }
             return ChooseMenuItem(MenuItems);
@@ -133,7 +135,7 @@ namespace TryBeingFit.Services.implementations
             {
                 for (int i = 0; i < entities.Count; i++)
                 {
-                    Console.WriteLine($"[{i + 1}] {entities[i].GetInfo}");
+                    Console.WriteLine($"[{i + 1}] {entities[i].GetInfo()}");
                 }
                 string input = Console.ReadLine();
                 int choice = ValidationHelper.ValidateNumber(input, entities.Count);
