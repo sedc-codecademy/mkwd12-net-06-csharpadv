@@ -1,13 +1,20 @@
 ﻿
 
 using QinshiftAcademy.TryBeingFit.Domain.Enums;
+using System.Security.Principal;
 
 namespace QinshiftAcademy.TryBeingFit.Domain.Models
 {
     public class PremiumUser : User
     {
         public List<VideoTraining> VideoTrainings { get; set; }
-        public LiveTraining LiveTraining { get; set; }
+        public LiveTraining? LiveTraining { get; set; }
+
+        public PremiumUser()
+        {
+            Type = UserType.PremiumUser;
+            VideoTrainings = new List<VideoTraining>();
+        }
 
         public PremiumUser(LiveTraining liveTraining)
         {
