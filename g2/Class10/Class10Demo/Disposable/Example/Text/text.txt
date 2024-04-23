@@ -4,3 +4,6 @@ text 3 manual
 text 1 save
 text 2 save
 text 3 save
+text 1 custom
+text 2 custom
+text 3 custom

@@ -3,7 +3,8 @@ using Disposable;
 using Helpers;
 
 ExtendedConsole.PrintInColor("\n================= DISPOSING =================\n\n", ConsoleColor.Cyan);
-
+// => process of releasing unmanaged resources such as file handles, database connections, and network connections
+// => it's important to dispose of these resources properly to avoid memory leaks and ensure the efficient use of resources
 
 const string FolderPath = @"..\..\..\Example\Text";
 const string FilePath = FolderPath + @"\text.txt";
@@ -152,6 +153,6 @@ void CustomDisposeExample()
 
 //ManualDisposeExample();
 //UsingDisposeExample();
-
+CustomDisposeExample();
 
 Console.ReadLine();

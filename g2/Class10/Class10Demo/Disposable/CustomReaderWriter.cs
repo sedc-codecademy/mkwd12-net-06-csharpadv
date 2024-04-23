@@ -17,10 +17,13 @@
             _sw.WriteLine(text);
         }
 
+        // We implement this private method that will remember when this class is disposed
+        // That way, if the same class tries to get disposed again, all the Dispose() methods will not get called
         protected virtual void Dispose(bool disposing)
         {
             if (!_disposed)
             {
+                // This happens only when the class needs to be disposed the first time
                 if (disposing)
                 {
                     _sw.Dispose();

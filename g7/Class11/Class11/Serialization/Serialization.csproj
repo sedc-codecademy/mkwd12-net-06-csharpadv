@@ -8,8 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QinshiftAcademy.TryBeingFit.Domain\QinshiftAcademy.TryBeingFit.Domain.csproj" />
-    <ProjectReference Include="..\TryBeingFit.Services\TryBeingFit.Services.csproj" />
+    <Folder Include="OurData\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
 </Project>
