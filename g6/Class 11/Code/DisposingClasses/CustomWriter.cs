@@ -22,12 +22,19 @@ namespace DisposingClasses
 
         public void Write(string text)
         {
-            if (text == "stop")
+            try
             {
-                throw new Exception("We should not write to file...");
+                if (text == "stop")
+                {
+                    throw new Exception("We should not write to file...");
+                }
+                //we are simulating a scenario that we have some other our resource
+                _writer.Write(text);
             }
-            //we are simulating a scenario that we have some other our resource
-            _writer.Write(text);
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         //Because we have a method in our class that keeps some resouce in use, we must have a Dispose method in our class 

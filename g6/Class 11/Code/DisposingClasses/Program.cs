@@ -98,5 +98,6 @@ void AppendTextToFileUsingCustomWriter(string text, string filePath)
 }
 
 AppendTextToFileUsingCustomWriter("Hello from custom writer", filePath);
+AppendTextToFileUsingCustomWriter("stop", filePath);
 
 #endregion
