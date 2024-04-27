@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threads", "Threads\Threads.csproj", "{5EAEDEFA-EAAD-4BFF-8519-BF7D51D68F05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks", "Tasks\Tasks.csproj", "{26F23D3E-1095-4EB7-9347-2D3D68FB0FB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async_await", "Async_await\Async_await.csproj", "{CD40548D-A5E2-44B9-B05C-51BCE87D9FA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EAEDEFA-EAAD-4BFF-8519-BF7D51D68F05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EAEDEFA-EAAD-4BFF-8519-BF7D51D68F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EAEDEFA-EAAD-4BFF-8519-BF7D51D68F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EAEDEFA-EAAD-4BFF-8519-BF7D51D68F05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26F23D3E-1095-4EB7-9347-2D3D68FB0FB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26F23D3E-1095-4EB7-9347-2D3D68FB0FB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26F23D3E-1095-4EB7-9347-2D3D68FB0FB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26F23D3E-1095-4EB7-9347-2D3D68FB0FB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD40548D-A5E2-44B9-B05C-51BCE87D9FA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD40548D-A5E2-44B9-B05C-51BCE87D9FA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD40548D-A5E2-44B9-B05C-51BCE87D9FA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD40548D-A5E2-44B9-B05C-51BCE87D9FA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B54652CE-63D7-4780-BE27-34570F6F5ABC}
+	EndGlobalSection
+EndGlobal
