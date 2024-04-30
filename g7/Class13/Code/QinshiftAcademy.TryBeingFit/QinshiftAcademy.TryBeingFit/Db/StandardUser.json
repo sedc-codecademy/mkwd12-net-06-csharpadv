@@ -1,0 +1,47 @@
+[
+  {
+    "VideoTrainings": [],
+    "FirstName": "Bob",
+    "LastName": "Bobsky",
+    "Username": "bob.bobsky",
+    "Password": "bob.bobsky1",
+    "Type": 1,
+    "Id": 1
+  },
+  {
+    "VideoTrainings": [],
+    "FirstName": "Bob",
+    "LastName": "Bobsky",
+    "Username": "bob.bobsky",
+    "Password": "bob.bobsky1",
+    "Type": 1,
+    "Id": 2
+  },
+  {
+    "VideoTrainings": [],
+    "FirstName": "Bob",
+    "LastName": "Bobsky",
+    "Username": "bob.bobsky",
+    "Password": "bob.bobsky1",
+    "Type": 1,
+    "Id": 3
+  },
+  {
+    "VideoTrainings": [],
+    "FirstName": "Bob",
+    "LastName": "Bobsky",
+    "Username": "bob.bobsky",
+    "Password": "bob.bobsky1",
+    "Type": 1,
+    "Id": 4
+  },
+  {
+    "VideoTrainings": [],
+    "FirstName": "Aleksandar",
+    "LastName": "Miloski",
+    "Username": "amiloski",
+    "Password": "amiloski123",
+    "Type": 1,
+    "Id": 5
+  }
+]
