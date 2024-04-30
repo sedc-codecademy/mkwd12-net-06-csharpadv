@@ -15,7 +15,7 @@ IUserService<PremiumUser> _premiumUserService = new UserService<PremiumUser>();
 IUiService _uiService = new UiService();
 User _currentUser = null;
 
-Seed();
+//Seed();
 
 int option = _uiService.LogInMenu();
 Console.Clear();
@@ -54,6 +54,7 @@ else
     StandardUser standardUser = _uiService.FillNewUserData();
     _currentUser = _standardUserService.Register(standardUser);
 }
+
 
 int mainMenuOption = _uiService.MainMenu(_currentUser.Type);
 string menuItem = _uiService.MenuItems[mainMenuOption - 1];
@@ -193,7 +194,7 @@ void Seed()
         Description = "Abs workout made easy",
         DifficultyLevel = TrainingDifficultyLevel.Easy,
         Link = "someLink",
-        //Rating = 3,
+        Rating = 3,
         //Time = 15.55
     });
     _videoTrainingService.AddTraining(new VideoTraining()
@@ -202,7 +203,7 @@ void Seed()
         Description = "Dance cardio",
         DifficultyLevel = TrainingDifficultyLevel.Medium,
         Link = "someLink",
-        //Rating = 5,
+        Rating = 5,
         //Time = 25
     });
 
@@ -214,7 +215,7 @@ void Seed()
         DifficultyLevel = TrainingDifficultyLevel.Medium,
         NextSession = DateTime.Now.AddDays(1),
         Trainer = registeredTrainer,
-        //Rating = 5,
+        Rating = 5,
         //Time = 25,
     });
 }

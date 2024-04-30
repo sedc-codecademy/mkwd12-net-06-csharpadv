@@ -10,7 +10,8 @@ namespace TryBeingFit.Services.implementations
         private IDatabase<T> _database;
         public UserService()
         {
-            _database = new Database<T>();
+            //_database = new Database<T>();
+            _database = new FileDatabase<T>();
         }
 
         public T ChangeInfo(int userId, string firstName, string lastName)
@@ -30,7 +31,18 @@ namespace TryBeingFit.Services.implementations
 
         public void ChangePassword(int userId, string oldPassword, string newPassword)
         {
-            throw new NotImplementedException();
+            T userDb = _database.GetById(userId);
+            if (userDb != null)
+                throw new Exception($"User with id {userId} was not found");
+
+            if(userDb.Password != oldPassword)
+                throw new Exception($"Old passwords do not match!");
+
+            if (!ValidationHelper.ValidatePassword(newPassword))
+                throw new Exception("Invalid password");
+
+            userDb.Password = newPassword;
+            _database.Update(userDb);
         }
 
         public T GetById(int id)

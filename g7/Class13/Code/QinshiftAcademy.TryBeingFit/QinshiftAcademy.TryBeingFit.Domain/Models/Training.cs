@@ -8,5 +8,6 @@ namespace QinshiftAcademy.TryBeingFit.Domain.Models
         public string Description { get; set; }
         public double Duration { get; set; }
         public TrainingDifficultyLevel DifficultyLevel { get; set; }
+        public double? Rating { get; set; }
     }
 }

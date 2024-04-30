@@ -11,6 +11,8 @@ namespace TryBeingFit.Services.implementations
         public TrainingService()
         {
             _database = new Database<T>();
+            //_database = new FileDatabase<T>();
+
         }
 
         public void AddTraining(T training)
