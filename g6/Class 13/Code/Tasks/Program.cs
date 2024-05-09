@@ -27,6 +27,17 @@ Task.Run(() => {
     Console.WriteLine("Code that executes immediatelly");
 });
 
+
+for( int i = 0; i < 20; i++)
+{
+    int temp = i;
+    Task.Run(() =>
+    {
+        Thread.Sleep(1000);
+        Console.WriteLine(temp);
+    });
+} 
+
 //we need this because sometimes the main thread on which program.cs is executing finishes before the other threads on which the tasks are executing
 //this way we don't let the app to finish
 Console.ReadLine(); 
