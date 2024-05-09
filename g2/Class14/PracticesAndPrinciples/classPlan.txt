@@ -1,0 +1,10 @@
+
+
+
+0. KORISNI LINKOVI ZA C#.... Tim Corey ... LinkedIn ... drugi resursi itn itn... dokumentacija Microsoft
+
+1. Good Practices
+	1.1. Naming
+	1.2. Methods
+	1.3. Loops
+	1.4. IfElse
