@@ -15,17 +15,23 @@
             // Bad example
             if (num1 <= 100 && num2 <= 100)
             {
-                if (num1 % 2 == 0 && num2 % 2 == 0)
-                {
-                    if (num1 == num2)
+                //if (num1 >= 0 && num2 >= 0)
+                //{
+                    if (num1 % 2 == 0 && num2 % 2 == 0)
                     {
-                        Console.WriteLine("They are the same");
+                        if (num1 == num2)
+                        {
+                            Console.WriteLine("They are the same");
+                        }
                     }
-                }
+                //}
             }
 
             // Good Example
-
+            if (num1 > 100 || num2 > 100) return;
+            if (num1 % 2 != 0 || num2 % 2 != 0) return;
+            if (num1 != num2) return;
+            Console.WriteLine("They are the same!");
         }
     }
 }

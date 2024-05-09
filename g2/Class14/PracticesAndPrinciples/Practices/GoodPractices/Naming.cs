@@ -43,13 +43,56 @@
     }
 
     // Good Example
+    internal class User
+    {
+        private readonly string _usersFolder = @"C:\users";
+        //public string UsersFolder = @"C:\users"; => if it's public the field is named using PascalCase
+        public int Id { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public int Age { get; set; }
+        public bool IsLoggedIn { get; set; }
+        public List<string> Hobbies { get; set; }
 
+        public User()
+        {
+
+        }
+
+        public void ChangeUsername(string username)
+        {
+            Username = username;
+        }
+
+        public void ChangePassword(string password)
+        {
+            Password = password;
+        }
+
+        public async Task GetUsersAsync()
+        {
+            // code
+        }
+
+    }
+
+    // TIPS : 
+    // 1. Write boolean names so that they can be answered with YES or NO (IsDeleted, IsAdmin, HasCheckedIn) => usually starts with "Is","Can" or "Has"
+    // 2. Boolean is false by default, there is no need to set it to false initially
+    // 3. Avoid using fields unless they are private
+    // 4. Avoid using 'this' keyword when addresing a property
+    // 5. Add the suffix "Async" to the name of an asynchronious method 
+    // 6. Avoid using Abbreviations
+    // 7. Methods names should be verbs / verb phrases
+    // 8. Avoid unnecessary empty lines in the code
+    // 9. Prefer using plural phrase for collection properties instead of adding the suffix words "List" or "Collection"
     #endregion
 
 
     #region ENUMS
 
     // Bad Example
+    //public enum Roles // bad  
     public enum RoleEnum
     {
         Admin,
@@ -57,7 +100,15 @@
     }
 
     // Good Example
-    
+    public enum Role
+    {
+        Admin = 1,
+        User = 2
+    }
+
+    // NOTE : 
+    // 1. Don't use the word 'Enum' when naming enums
+    // 2. Numbering the enums makes them more readable (optional)
     #endregion
 
 
@@ -66,14 +117,21 @@
     // Bad Example
     public interface UserService
     {
-        void PrintUser(string username)
+        public void PrintUser(string username)
         {
             // code ...
         }
     }
 
     // Good Example
-    
+    public interface IUserService
+    {
+        void PrintUser(string username);
+    }
+
+    // NOTE: 
+    // 1. NEVER WRITE IMPLEMENTATIONS IN INTERFACES, ONLY DEFINITIONS !!!
+    // 2. Always add the 'I' prefix when naming Interfaces
     #endregion
 
 }

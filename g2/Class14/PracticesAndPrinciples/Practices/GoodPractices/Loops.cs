@@ -28,7 +28,14 @@
             }
 
             // Good example
-
+            int listLength = Names.Count;
+            for (int counter = 0; counter < listLength; counter++)
+            {
+                if (Names[counter].Length == listLength)
+                {
+                    Console.WriteLine(Names[counter]);
+                }
+            }
         }
 
         // REQUIREMENT: Print Jordan
@@ -44,7 +51,14 @@
             }
 
             // Good example
-
+            foreach (string name in Names)
+            {
+                if (name == "Jordan")
+                {
+                    Console.WriteLine(name);
+                    break;
+                }
+            }
         }
 
         // REQUIREMENT: Remove all names from the collection except the ones that start with the letter "J"
@@ -61,6 +75,19 @@
             }
 
             // Good example
+            List<string> namesToRemove = new List<string>();
+            foreach (string name in Names)
+            {
+                if (!name.StartsWith('J'))
+                {
+                    namesToRemove.Add(name);
+                }
+            }
+
+            foreach (var name in namesToRemove)
+            {
+                Names.Remove(name);
+            }
 
         }
 

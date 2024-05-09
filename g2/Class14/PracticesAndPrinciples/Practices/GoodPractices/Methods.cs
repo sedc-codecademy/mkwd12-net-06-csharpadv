@@ -54,7 +54,46 @@
     #region Good Example
 
     // Good Example
-   
+    internal class NumberService
+    {
+        public List<int> RequestNumbers(int numbersCount)
+        {
+            List<int> result = new List<int>();
+            for (int i = 0; i < numbersCount; i++)
+            {
+                Console.Write("Enter number: ");
+                result.Add(int.Parse(Console.ReadLine()));
+            }
+            return result;
+        }
+
+        public void PrintNumbers(List<int> numbers)
+        {
+            foreach (int num in numbers)
+            {
+                Console.Write(num + " ");
+            }
+            Console.WriteLine();
+        }
+
+        public void PrintStats(List<int> numbers)
+        {
+            int even = numbers.Where(x => x % 2 == 0).Count();
+            Console.WriteLine($"Even numbers: {even}");
+
+            int odd = numbers.Count - even;
+            Console.WriteLine($"Odd numbers: {odd}");
+
+            int positive = numbers.Where(x => x >= 0).Count();
+            Console.WriteLine($"Positive numbers: {positive}");
+
+            int negative = numbers.Count - positive;
+            Console.WriteLine($"Negative numbers: {negative}");
+
+            int sum = numbers.Sum();
+            Console.WriteLine($"Sum of numbers: {sum}");
+        }
+    }
 
     #endregion
 }
