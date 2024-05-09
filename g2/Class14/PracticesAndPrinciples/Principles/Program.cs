@@ -3,5 +3,15 @@ using Principles.SOLID;
 
 Console.WriteLine("Hello, World!");
 
-//AppStartWithoutLSP.Main();
-//AppWithLSP.Main();
+AppStartWithoutLSP.Main(); // Circle
+Console.WriteLine();
+AppStartWithLSP.Main(); // Triangle
+
+List<IMessage> messages = new List<IMessage>()
+{
+    new Facebook(),
+    new Sms(),
+    new Email(),
+};
+NotificationService notificationService = new NotificationService(messages);
+notificationService.Send();

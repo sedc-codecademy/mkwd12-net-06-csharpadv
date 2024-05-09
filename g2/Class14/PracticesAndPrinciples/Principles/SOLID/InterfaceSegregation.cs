@@ -119,6 +119,67 @@
 
     #region With ISP
     // GOOD EXAMPLE
- 
+
+    interface IUserService
+    {
+        bool Login(string username, string password);
+        int Register(TaxiUser user);
+        List<TaxiUser> GetAllUsers();
+    }
+
+    interface IDriverService
+    {
+        List<TaxiDriver> GetAllDrivers();
+    }
+
+    interface ICarService
+    {
+        List<TaxiCar> GetAllCars();
+        void GetAllLicensePlates();
+    }
+
+    class UserServiceWithISP : IUserService
+    {
+        public List<TaxiUser> GetAllUsers()
+        {
+            // code...
+            return new List<TaxiUser>();
+        }
+
+        public bool Login(string username, string password)
+        {
+            // code...
+            return true;
+        }
+
+        public int Register(TaxiUser user)
+        {
+            // code...
+            return user.Id;
+        }
+    }
+
+    class DriverServiceWithISP : IDriverService
+    {
+        public List<TaxiDriver> GetAllDrivers()
+        {
+            // code ...
+            return new List<TaxiDriver>();
+        }
+
+    }
+
+    class CarServiceWithISP : ICarService
+    {
+        public List<TaxiCar> GetAllCars()
+        {
+            return new List<TaxiCar>();
+        }
+
+        public void GetAllLicensePlates()
+        {
+            Console.WriteLine("License Plates");
+        }
+    }
     #endregion
 }

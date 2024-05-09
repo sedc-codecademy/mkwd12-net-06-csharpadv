@@ -30,7 +30,7 @@
         public static void Main()
         {
             TriangleWithoutLSP triangle = new CircleWithoutLSP();
-            Console.WriteLine(triangle.GetShape()); // will print Circle
+            Console.WriteLine(triangle.GetShape()); 
         }
     }
 
@@ -38,6 +38,36 @@
 
     #region With LSP
     // GOOD EXAMPLE
+
+    public abstract class ShapeWithLSP
+    {
+        public abstract string GetShape();
+    }
+
+    public class TriangleWithLSP : ShapeWithLSP
+    {
+        public override string GetShape()
+        {
+            return "Triangle";
+        }
+    }
+
+    public class CircleWithLSP : ShapeWithLSP
+    {
+        public override string GetShape()
+        {
+            return "Circle";
+        }
+    }
+
+    public class AppStartWithLSP
+    {
+        public static void Main()
+        {
+            ShapeWithLSP triangle = new TriangleWithLSP();
+            Console.WriteLine(triangle.GetShape());
+        }
+    }
 
     #endregion
 

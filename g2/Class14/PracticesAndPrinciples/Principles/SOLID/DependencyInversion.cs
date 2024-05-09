@@ -66,6 +66,61 @@
 
     #region With DIP
     // Good Example
-    
+
+    public interface IMessage
+    {
+        void SendMessage();
+    }
+
+    public class Email : IMessage
+    {
+        public string EmailAddress { get; set; }
+        public string Subject { get; set; }
+        public string Content { get; set; }
+
+        public void SendMessage()
+        {
+            Console.WriteLine("Sending Email...");
+        }
+    }
+
+    public class Sms : IMessage
+    {
+        public string PhoneNumber { get; set; }
+        public string Message { get; set; }
+
+        public void SendMessage()
+        {
+            Console.WriteLine("Sending SMS...");
+        }
+    }
+
+    public class Facebook : IMessage
+    {
+        public string FacebookAccount { get; set; }
+        public string Message { get; set; }
+
+        public void SendMessage()
+        {
+            Console.WriteLine("Sending Facebook message...");
+        }
+    }
+
+    public class NotificationService
+    {
+        private ICollection<IMessage> _messages;
+        public NotificationService(List<IMessage> messages)
+        {
+            _messages = messages;
+        }
+        public void Send()
+        {
+            foreach (var message in _messages)
+            {
+                message.SendMessage();
+            }
+        }
+    }
+   
     #endregion
 }
