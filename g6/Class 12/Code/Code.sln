@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializationDeserialization", "SerializationDeserialization\SerializationDeserialization.csproj", "{172E0FC8-57B9-4F38-924F-52603D090EEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerializationDeserialization", "SerializationDeserialization\SerializationDeserialization.csproj", "{172E0FC8-57B9-4F38-924F-52603D090EEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonDb", "JsonDb\JsonDb.csproj", "{9352B1E7-BC80-4598-8241-EC66FA25AE06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonDb", "JsonDb\JsonDb.csproj", "{9352B1E7-BC80-4598-8241-EC66FA25AE06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise", "Exercise\Exercise.csproj", "{0A8461BF-11ED-4C39-A5C3-A1FE3E4386E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{9352B1E7-BC80-4598-8241-EC66FA25AE06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9352B1E7-BC80-4598-8241-EC66FA25AE06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9352B1E7-BC80-4598-8241-EC66FA25AE06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A8461BF-11ED-4C39-A5C3-A1FE3E4386E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A8461BF-11ED-4C39-A5C3-A1FE3E4386E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A8461BF-11ED-4C39-A5C3-A1FE3E4386E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A8461BF-11ED-4C39-A5C3-A1FE3E4386E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
