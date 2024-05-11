@@ -48,7 +48,20 @@ namespace TaxiManager9000.Services
 
         public void Seed(List<T> entities)
         {
-            entities.ForEach(entity =>  _db.Add(entity));
+            if (!SeedCompleted())
+            {
+                entities.ForEach(entity => _db.Add(entity));
+            }
+        }
+
+        private bool SeedCompleted()
+        {
+            List<T> entitiesDb = GetAll();
+            if (entitiesDb == null)
+            {
+                return false;
+            }
+            return entitiesDb.Any();
         }
 
     }
