@@ -1,0 +1,20 @@
+[
+  {
+    "NextSession": "0001-01-01T00:00:00",
+    "Title": "Yoga",
+    "Description": "Yoga training",
+    "Time": 30.0,
+    "Rating": 0.0,
+    "Trainer": {
+      "YearsOfExperience": 5,
+      "FirstName": "Petko",
+      "LastName": "Petkovski",
+      "Username": "ppetkovski",
+      "Password": "P@ssw0rd",
+      "UserRole": 3,
+      "Id": 1
+    },
+    "TrainingDifficulty": 2,
+    "Id": 1
+  }
+]

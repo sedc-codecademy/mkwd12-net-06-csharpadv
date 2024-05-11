@@ -1,0 +1,22 @@
+[
+  {
+    "VideoTrainings": [],
+    "LiveTraining": null,
+    "FirstName": "Ana",
+    "LastName": "Anovska",
+    "Username": "aanovska",
+    "Password": "Test321",
+    "UserRole": 2,
+    "Id": 1
+  },
+  {
+    "VideoTrainings": [],
+    "LiveTraining": null,
+    "FirstName": "tijana",
+    "LastName": "stojanovsk",
+    "Username": "tijanas",
+    "Password": "P@ssw0rd",
+    "UserRole": 2,
+    "Id": 2
+  }
+]
