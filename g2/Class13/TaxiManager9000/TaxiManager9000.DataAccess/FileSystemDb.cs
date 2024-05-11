@@ -106,7 +106,7 @@ namespace TaxiManager9000.DataAccess
                 if(item != null)
                 {
                     data.Remove(item);
-                    WriteData(_idPath, data);
+                    WriteData(_dbPath, data);
                     return true;
                 }
                 return true;
@@ -141,7 +141,7 @@ namespace TaxiManager9000.DataAccess
             if (item != null)
             {
                 data[data.IndexOf(item)] = entity;
-                WriteData(_idPath, data);
+                WriteData(_dbPath, data);
                 return true;
             }
             return true;
