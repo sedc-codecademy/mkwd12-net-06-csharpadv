@@ -9,6 +9,5 @@ namespace Services
 {
     public interface IMeteoService
     {
-        Task<WeatherModel> GetWeatherStat();
     }
 }
