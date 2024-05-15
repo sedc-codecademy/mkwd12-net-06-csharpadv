@@ -10,6 +10,16 @@ namespace TryBeingFit.Services.Implementations
 {
     public class SecondUserService<T> : IUserService<T> where T : User
     {
+        public T ChangeInfo(int userId, string firstName, string lastName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public T ChangePassword(int userId, string oldPassword, string newPassword)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<T> GetAll()
         {
             throw new NotImplementedException();

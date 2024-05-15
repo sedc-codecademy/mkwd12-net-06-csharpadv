@@ -3,6 +3,7 @@ using TryBeingFit.Services.Implementations;
 using TryBeingFit.Services.Interfaces;
 using TryBeingFit.Domain.Enums;
 using System.ComponentModel.DataAnnotations;
+using System.Reflection.Metadata.Ecma335;
 
 //we want to make Program.cs dependent on interface, Program.cs uses a variable of type IUserService
 //that ensures us that the variable will always have a method Register, the implementation can be different
@@ -194,6 +195,63 @@ switch (mainMenuOption)
         List<Trainer> trainers = trainerUserService.GetAll();
         trainers.FirstOrDefault(x => x.Username == currentUser.Username).Reschedule(liveTraining, numOfDays);
         //change info
+        break;
+    case "Account info":
+        Console.WriteLine("Choose an option: 1) Change info 2)Change password");
+        string option = Console.ReadLine();
+
+        bool successParseInput = int.TryParse(option, out int accountChoice);
+        if (!successParseInput)
+        {
+            Console.WriteLine("Invalid user option");
+        }
+        if(accountChoice == 1)
+        {
+            //change info
+            Console.WriteLine("Enter first name:");
+            string firstName = Console.ReadLine();
+            Console.WriteLine("Enter last name");
+            string lastName = Console.ReadLine();
+            switch (currentUser.UserRole)
+            {
+                case UserRoleEnum.Standard:
+                    currentUser = standardUserService.ChangeInfo(currentUser.Id, firstName, lastName);
+                    break;
+                case UserRoleEnum.Premium:
+                    currentUser = premiumUserService.ChangeInfo(currentUser.Id, firstName, lastName);
+                    break;
+                case UserRoleEnum.Trainer:
+                    currentUser = trainerUserService.ChangeInfo(currentUser.Id, firstName, lastName);
+                    break;
+            }
+
+        }else if(accountChoice == 2)
+        {
+            //change password
+            Console.WriteLine("Enter old password");
+            string oldPassword = Console.ReadLine();
+            Console.WriteLine("Enter new password");
+            string newPassword = Console.ReadLine();
+            switch(currentUser.UserRole){
+                case UserRoleEnum.Standard:
+                    currentUser = standardUserService.ChangePassword(currentUser.Id, oldPassword, newPassword);
+                    break;
+                case UserRoleEnum.Premium:
+                    currentUser = premiumUserService.ChangePassword(currentUser.Id, oldPassword, newPassword);
+                    break;
+                case UserRoleEnum.Trainer:
+                    currentUser = trainerUserService.ChangePassword(currentUser.Id, oldPassword, newPassword);
+                    break;
+            }
+        }
+        else
+        {
+            Console.WriteLine("Inavlid option");
+        }
+        break;
+
+    case "Logout":
+        currentUser = null;
         break;
 }
 

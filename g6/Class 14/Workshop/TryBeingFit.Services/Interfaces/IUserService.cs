@@ -17,5 +17,9 @@ namespace TryBeingFit.Services.Interfaces
         List<T> GetAll();
 
         void RemoveById(int userId);
+
+        T ChangeInfo(int userId, string firstName, string lastName);    
+
+        T ChangePassword(int userId, string oldPassword, string newPassword);
     }
 }

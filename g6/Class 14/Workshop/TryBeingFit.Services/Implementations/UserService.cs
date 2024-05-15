@@ -23,7 +23,9 @@ namespace TryBeingFit.Services.Implementations
             //we can always assign an object from a class that impelents an interface to a variable
             //with type interface (new Database() -> IDatabase)
             //here we tell that we will use the implementation from the Database.cs, but only the methods that are present in the interface
-            _database = new Database<T>();
+          
+            // _database = new Database<T>();
+            _database = new FileDatabase<T>();
 
             //if eventually we want to change the implementation and use the implemention of another class
             //the only place that we need to change is here
@@ -31,6 +33,47 @@ namespace TryBeingFit.Services.Implementations
             //from the IDatabase interface
             //_database = new ExampleDatabase<T>();
         }
+
+        public T ChangeInfo(int userId, string firstName, string lastName)
+        {
+            //find the user
+            T user = _database.GetById(userId);
+            if (user == null)
+            {
+                throw new Exception($"User with id {userId} was not found in the db");
+            }
+            if(!ValidationHelper.ValidateName(firstName) || !ValidationHelper.ValidateName(lastName))
+            {
+                throw new Exception("Invalid first name or last name");
+            }
+            user.FirstName = firstName;
+            user.LastName = lastName;
+            _database.Update(user);
+            return user;
+        }
+
+        public T ChangePassword(int userId, string oldPassword, string newPassword)
+        {
+            T user = _database.GetById(userId);
+            if (user == null)
+            {
+                throw new Exception($"User with id {userId} was not found in the db");
+            }
+            if(user.Password != oldPassword)
+            {
+                throw new Exception("Old passwords do not match");
+            }
+
+            if (!ValidationHelper.ValidatePassword(newPassword))
+            {
+                throw new Exception("Invalid password");
+            }
+
+            user.Password = newPassword;
+            _database.Update(user);
+            return user;
+        }
+
         public List<T> GetAll()
         {
             List<T> items = _database.GetAll();
@@ -67,10 +110,13 @@ namespace TryBeingFit.Services.Implementations
             List<T> items = GetAll();
             //  List<T> items = _database.GetAll();
             //items.FirstOrDefault(x => x.Username == newUser.Username);
-            bool alreadyExists = items.Any(x => x.Username.ToLower() == newUser.Username.ToLower());
-            if (alreadyExists)
+            if (items != null)
             {
-                throw new Exception("User already exists");
+                bool alreadyExists = items.Any(x => x.Username.ToLower() == newUser.Username.ToLower());
+                if (alreadyExists)
+                {
+                    throw new Exception("User already exists");
+                }
             }
 
             if (!ValidationHelper.ValidateName(newUser.FirstName))
@@ -114,5 +160,7 @@ namespace TryBeingFit.Services.Implementations
 
             _database.RemoveById(userId);
         }
+
+
     }
 }
